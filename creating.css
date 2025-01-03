@@ -1,0 +1,82 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8b3d4, #f58f93);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container for the buttons */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(145deg, #ff6a00, #ee0979);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #ff7c7c, #ff485f);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Active State */
+button:active {
+    background: linear-gradient(145deg, #ff485f, #ff7c7c);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Specific Styling */
+button#own {
+    background: linear-gradient(145deg, #ff6a00, #ee0979);
+}
+
+button#exist {
+    background: linear-gradient(145deg, #0f4b5c, #18a2b8);
+}
+
+/* Additional Text Styling for Body */
+h1, p {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Container Layout */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    button {
+        width: 80%;
+    }
+}

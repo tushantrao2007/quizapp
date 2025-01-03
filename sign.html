@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign.css">
+    <title>Quiz Grow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedan+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="main">
+        
+        <div class="sign-up">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <button id="googleSignUp" type="button" class="social">
+                        <i class="fa-brands fa-google"></i>
+                    </button>
+                </div>
+                <p>or use your email for registration</p>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="signUpPassword" required>
+                    <button type="button" class="show-password" onclick="togglePassword('signUpPassword', this)">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        
+        <div class="sign-in">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <button id="googleSignIn" type="button" class="social">
+                        <i class="fa-brands fa-google"></i>
+                    </button>
+                </div>
+                <p>or use your account</p>
+                <input type="email" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="signInPassword" required>
+                    <button type="button" class="show-password" onclick="togglePassword('signInPassword', this)">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                </div>
+                <button type="submit" id="signI">Sign In</button>
+            </form>
+        </div>
+        
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To gain more knowledge, connect with our app</p>
+                    <button type="submit" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-right">
+                    <h1>Hello, Friends!</h1>
+                    <p>Enter your details to dive into the world of quizzes</p>
+                    <button type="submit" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="sign.js" defer></script>
+    <script>
+        function togglePassword(inputId, button) {
+            const input = document.getElementById(inputId);
+            const icon = button.querySelector('i');
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+        // document.querySelector("#signI").addEventListener("click",()=>{
+        //     window.location.href="creating.html";
+        // })
+    </script>
+</body>
+</html>
